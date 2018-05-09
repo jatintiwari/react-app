@@ -4,7 +4,7 @@ module.exports = {
   mode: process.env.NODE_ENV ? "production": "development", // "production" | "development" | "none"
   // Chosen mode tells webpack to use its built-in optimizations accordingly.
 
-  entry: "./src/index.jsx", // string | object | array
+  entry: "./src/store/index.js", // string | object | array
   // Here the application starts executing
   // and webpack starts bundling
   devServer: {
