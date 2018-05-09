@@ -31,3 +31,4 @@ store.dispatch(addTodo('Todo 1'));
 store.dispatch(addTodo('Todo 2'));
 store.dispatch(addTodo('Todo 3'));
 store.dispatch(addTodo('Todo 4'));
+store.dispatch(toggleTodo(2));
