@@ -9,8 +9,10 @@ import { combineReducers } from 'redux';
  */
 
 import topics from './topics';
+import todos from './todos';
 
 const reducers = combineReducers(Object.assign({},
-  topics
+  topics,
+  todos
 ));
 export default reducers;
