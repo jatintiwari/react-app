@@ -60,7 +60,7 @@ const { SHOW_ALL } = Topic.VisibilityFilters;
  * 
  */
 
-const topic = (state = [], action) => {
+const topics = (state = [], action) => {
   switch (action.type) {
     case ADD_TOPIC:
       return [
@@ -94,9 +94,7 @@ const visibilityFilter = (state = SHOW_ALL, action) => {
   }
 }
 
-const topics = {
+export default {
   visibilityFilter,
-  topic
+  topics
 };
-
-export default topics;

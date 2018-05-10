@@ -15,9 +15,9 @@ import AddTodo from './addTodo';
 export default class TodoList extends React.Component {
   constructor(props) {
     super(props);
-    this.todos = this.props.todos.map((todo, index) => <Todo text={todo.text} key={index} onClick={this.props.onTodoClick.bind(this, index)} />)
   }
   render() {
+    this.todos = this.props.todos.map((todo, index) => <Todo todo={todo} key={index} onClick={this.props.onTodoClick.bind(this, index)} />)
     return (
       <div>
         <h4>Todo List</h4>
