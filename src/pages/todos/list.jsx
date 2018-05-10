@@ -3,7 +3,11 @@
  */
 
 import React from 'react';
+/**
+ * children
+ */
 import Todo from './todo';
+import AddTodo from './addTodo';
 
 /**
  * * todo list container
@@ -17,6 +21,7 @@ export default class TodoList extends React.Component {
     return (
       <div>
         <h4>Todo List</h4>
+        <AddTodo/>
         <ul>{this.todos}</ul>
       </div>
 
