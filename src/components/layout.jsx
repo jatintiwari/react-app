@@ -20,7 +20,7 @@ import Home from "../pages/home/component";
 import About from "../pages/about/component";
 import Topics from "../pages/topics/component";
 import Todos from "../pages/todos/component";
-
+import Tweets from "../pages/tweets/component";
 /**
  * component
  */
@@ -36,12 +36,14 @@ export default class Layout extends React.Component {
           <li><Link to="/about">About</Link></li>
           <li><Link to="/topics">Topics</Link></li>
           <li><Link to="/todos">Todos</Link></li>
+          <li><Link to="/tweets">Tweets</Link></li>
         </ul>
         <hr/>
         <Route exact path="/" component={Home} />
         <Route path="/about" component={About} />
         <Route path="/topics" component={Topics} />
         <Route path="/todos" component={Todos} />
+        <Route path="/tweets" component={Tweets} />
       </div>
     )
   }
