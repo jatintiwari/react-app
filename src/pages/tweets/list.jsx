@@ -25,8 +25,11 @@ export default class TweetsList extends React.Component {
       <div>
         <h4>Tweets List</h4>
         <ul>{
-          Array.isArray(this.props.tweets) && this.props.tweets.map((tweet, index) => <li key={index}>{tweet.text}</li>)
+          this.props.tweets && this.props.tweets.map((tweet, index) => <li key={index}>{tweet.text}</li>)
         }</ul>
+        {
+          this.props.error ? <div>{this.props.error.stack}</div> : <span></span>
+        }
       </div>
 
     )

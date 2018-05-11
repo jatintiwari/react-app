@@ -20,7 +20,8 @@ import Tweets from './list';
  */
 const mapStateToProps = (state) => {
   return {
-    tweets: state.tweets.data
+    tweets: state.tweets.data,
+    error: state.tweets.error
   }
 }
 

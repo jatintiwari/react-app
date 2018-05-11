@@ -14,11 +14,11 @@ export const fetchTweets = () => {
   return (dispatch) => {
     dispatch({ type: FETCH_TWEETS_START });
     fetch("http://localhost:3000/api/tweets")
-      .then((response) => {
-        if (!response.error) return response.json();
-        throw new Error(response.error);
+      .then((response) => response.json())
+      .then(response => {
+        if(response.error) throw new Error(response.error);
+        dispatch({ type: RECIEVE_TWEETS, tweets: response });
       })
-      .then(tweets => dispatch({ type: RECIEVE_TWEETS, tweets }))
       .catch(error => {
         dispatch({ type: FETCH_TWEETS_ERROR, error })
       });
