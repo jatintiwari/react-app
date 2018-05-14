@@ -16,8 +16,29 @@ export default class TweetsList extends React.Component {
   }
 
   componentWillMount() {
-    this.props.fetchTweets()
+    this.props.fetchTweets();
+    console.log("componentWillMount");
     // setInterval(this.props.fetchTweets, 2000);
+  }
+
+  componentDidMount() {
+    console.log("componentDidMount");
+    this.internval = setInterval(this.props.fetchTweets, 2000);
+  }
+  
+  componentWillReceiveProps(){
+    console.log("componentWillReceiveProps");
+  }
+  componentWillUnmount(){
+    console.log("componentWillUnmount");
+    clearInterval(this.internval);
+  }
+  componentWillUpdate(){
+    console.log("componentWillUpdate");
+  }
+  
+  componentDidCatch(error, info) {
+    console.log("componentDidCatch");
   }
 
   render() {
